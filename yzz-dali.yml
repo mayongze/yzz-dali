@@ -1,0 +1,45 @@
+mqtt:
+  server: tcp://192.168.123.19:1883
+  user: "mayongze"
+  password: "xxxxxx"
+  base_topic: yzz-dali
+
+serial: tcp://192.168.123.129:8899
+
+devices:
+  strdance_switch_4gang_0:
+    addr: 0
+    type: 'StrDance'
+    name: "字符串跳动4开"
+  short_00:
+    type: 'GearShort'
+    addr: 0
+    name: "Short 00"
+    transition: 0
+  short_01:
+    type: 'GearShort'
+    addr: 1
+    name: "Short 01"
+    transition: 0
+  short_02:
+    type: 'GearShort'
+    addr: 2
+    name: "Short 02"
+    transition: 0
+  short_03:
+    type: 'GearShort'
+    addr: 3
+    name: "Short 03"
+    transition: 0
+
+groups:
+  group_01:
+    type: 'DaliGroup'
+    addr: 1
+    name: "Group 01"
+    transition: 0
+    devices:
+        - short_00
+        - short_01
+        - short_02
+        - short_03
